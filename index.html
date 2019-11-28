@@ -16,21 +16,37 @@
     body {
     	font-family: 'Nunito Sans', sans-serif;
     }
+    body::after {
+        width: 100%;
+        height: 400px;
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        display: block;
+        content: "";
+        background: -webkit-gradient(linear,left top,left bottom,color-stop(1,#fff),color-stop(.6,rgba(255,255,255,0)));
+        background: -moz-linear-gradient(center bottom,#fff 0%,rgba(255,255,255,0) 60%);
+        pointer-events: none;
+    }
   	h1 {
   		font-size: 34px;
   		line-height: 44px;
-  		font-weight: 300;
+  		font-weight: 900;
       color: #000;
   	}
   	h1 span {
   		font-size: 55px;
   	}
-  	h1 strong {
-  		color: #000 !important;
-  		font-weight: 300;
+  	h1 strong, h1 strong a, h1 strong a:focus {
+  		color: #ff2125;
+  		font-weight: 900;
       position: relative;
+      transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      outline: none;
+      text-decoration: none;
   	}
-    h1 strong:after {
+    h1 strong a:after {
         content: '';
         background: rgba(255, 107, 107, 0.35);
         width: 100%;
@@ -38,6 +54,19 @@
         position: absolute;
         bottom: 5px;
         left: 0px;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+    }
+    h1 strong a:hover {
+      text-decoration: none;
+      color: #ff2125;
+      transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+    }
+    h1 strong a:hover:after {
+      height: 40px;
+      transition: all 0.5s;
+      -webkit-transition: all 0.5s;
     }
     </style>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -50,17 +79,25 @@
   <body>
     <div class="container">
 	    <div class="row">
-		    <div class="col-md-12">
+		    <div class="col-md-7">
 		     <br/><br/><br/><br/>
-         <h1>Hello <img src="images/hello.png" width="50" style="vertical-align: top" />
+         <h1>Hey <img src="images/hand.png" width="50" style="vertical-align: bottom" />
          <br/><br/>
-			   I'm <strong style="color: #e74c3c">Ashish Tayade</strong> a <strong style="color: #e74c3c">Pune</strong> based <strong style="color: #e74c3c">UI developer</strong> who has been in the field for <strong style="color: #e74c3c">6 years and counting</strong>. 
+			   I'm <strong>Ashish Tayade</strong> a <strong>Pune</strong> based <strong>UI developer</strong> who has been in the field for <strong>6 years and counting</strong>. 
 			   <br/><br/>
 			   My passion is all about creating real elegant looking <strong>web application</strong>. Always keeping it clean and simple with that added functionally of user interaction you would like to see.
          <br/><br/>
-         For more detail check out my <a href="#"><strong>Resume</strong></a>
+         For more detail about my work experience, education and hobbies. Please check out my <strong><a href="resume/Ashish-Tayade-UI-Developer-Resume.pdf" target="_blank">resume</a></strong>.
+         <br/><br/>
+         Feel free to get in touch, you can reach me via any possible ways you can think of, you know, like <strong><a href="mailto:ashish.tayade4@gmail.com" target="_blank">email</a></strong>, <strong><a href="https://twitter.com/pixpalette" target="_blank">twitter</a></strong>, maybe <strong><a href="https://www.instagram.com/ashish.tayade/" target="_blank">instagram</a></strong>
+         <br/><br/>
+         Thank you for coming. Hope you had a little nice time here.
+         <br/><br/>
+         Have a good day!
+         <br/><br/>
+         <img src="images/smile.png" width="50" style="vertical-align: top" />
          </h1>
-         <br/><br/><br/><br/>
+         <br/><br/><br/><br/><br/><br/><br/><br/>
 		    </div>
 	    </div>
     </div>
